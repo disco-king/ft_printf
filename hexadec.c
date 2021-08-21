@@ -21,9 +21,7 @@ void	pr_hexadec(t_conv *conv)
 	int				length;
 
 	get_asters(conv);
-	number = va_arg(conv -> vars, int);
-	if (number < 0)
-		number += 4294967296;
+	number = va_arg(conv -> vars, unsigned int);
 	length = xd_length(number);
 	if ((conv -> minus) || conv -> precision != -1)
 		conv -> zero = 0;
